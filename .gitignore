@@ -1,0 +1,7 @@
+*.txt
+*.pdf
+/tests
+/bin
+*.o
+*.a
+*.md
