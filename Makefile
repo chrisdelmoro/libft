@@ -1,4 +1,10 @@
 NAME = libft.a
+
+LIB = libft.h
+
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
+
 SRC =	ft_isalpha.c \
 		ft_isdigit.c \
 		ft_isalnum.c \
@@ -32,49 +38,34 @@ SRC =	ft_isalpha.c \
 		ft_putchar_fd.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
-		ft_putnbr_fd.c \
+		ft_putnbr_fd.c
 
-OBJ = 	ft_isalpha.o \
-		ft_isdigit.o \
-		ft_isalnum.o \
-		ft_isascii.o \
-		ft_isprint.o \
-		ft_strlen.o \
-		ft_memset.o \
-		ft_bzero.o \
-		ft_memcpy.o \
-		ft_memmove.o \
-		ft_strlcpy.o \
-		ft_strlcat.o \
-		ft_toupper.o \
-		ft_tolower.o \
-		ft_strchr.o \
-		ft_strrchr.o \
-		ft_strncmp.o \
-		ft_memchr.o \
-		ft_memcmp.o \
-		ft_strnstr.o \
-		ft_atoi.o \
-		ft_calloc.o \
-		ft_strdup.o \
-		ft_substr.o \
-		ft_strjoin.o \
-		ft_strtrim.o \
-		ft_split.o \
-		ft_itoa.o \
-		ft_strmapi.o \
-		ft_striteri.o \
-		ft_putchar_fd.o \
-		ft_putstr_fd.o \
-		ft_putendl_fd.o \
-		ft_putnbr_fd.o \
+BONUS =	ft_lstnew.c \
+		#ft_lstadd_front.c \
+		#ft_lstsize.c \
+		ft_lstlast.c \
+		ft_lstadd_back.c \
+		ft_lstdelone.c \
+		ft_lstclear.c \
+		ft_lstiter.c \
+		ft_lstmap.c
+
+OBJ		= $(SRC:.c=.o)
+
+BOBJ	= $(BONUS:.c=.o)
 
 
 all: $(NAME)
 
-$(NAME): $(SRC) libft.h
-	gcc -Wall -Werror -Wextra -c $(SRC) -I .
-	ar -rc $(NAME) *.o
+$(NAME): $(SRC) $(BONUS) $(LIB)
+	$(CC) $(CFLAGS) -c $(SRC) $(BONUS) -I .
+	ar -rc $(NAME) $(OBJ) $(BOBJ)
+
+so:
+	$(CC) -fPIC $(CFLAGS) $(SRC)
+	gcc -shared -o libft.so $(OBJ)
+
+bonus: all
 
 clean:
 	rm -f $(OBJ)
@@ -84,5 +75,5 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
 #CORRIGIR UPDATE DAS FUNÇÕES
