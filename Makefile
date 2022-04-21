@@ -62,8 +62,8 @@ $(NAME): $(SRC) $(BONUS) $(LIB)
 	ar -rc $(NAME) $(OBJ) $(BOBJ)
 
 so:
-	$(CC) -fPIC $(CFLAGS) $(SRC)
-	gcc -shared -o libft.so $(OBJ)
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC) $(BONUS)
+	gcc -nostartfiles -shared -o libft.so $(OBJ) $(BOBJ)
 
 bonus: all
 
