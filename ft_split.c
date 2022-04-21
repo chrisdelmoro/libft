@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 18:58:29 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/04/11 22:31:21 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/04/21 00:32:02 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,9 +79,9 @@ char	**ft_split(char const *s, char c)
 	char			**strs;
 	size_t			strcnt;
 
-	strcnt = ft_strcnt(s, c);
 	if (!s)
 		return (NULL);
+	strcnt = ft_strcnt(s, c);
 	strs = (char **) ft_calloc(strcnt + 1, sizeof(char *));
 	if (!strs)
 		return (NULL);

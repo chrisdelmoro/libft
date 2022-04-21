@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 21:54:24 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/04/21 00:05:38 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/04/21 00:09:28 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*newlst;
 	t_list	*node;
-	
+
 	if (!lst || !f)
 		return (NULL);
 	newlst = NULL;

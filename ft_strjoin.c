@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 23:08:45 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/04/09 12:05:14 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/04/21 00:20:31 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	s2len;
 	char	*str;
 
+	if (!s1 || !s2)
+		return (NULL);
 	s1len = ft_strlen(s1);
 	s2len = ft_strlen(s2);
 	str = (char *) malloc((s1len + s2len + 1) * sizeof(char));

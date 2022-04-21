@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 22:58:13 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/04/15 23:19:09 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/04/21 00:24:46 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*str;
 	size_t	i;
 
+	if (!s || !f)
+		return (NULL);
 	str = (char *) ft_calloc(sizeof(char), ft_strlen(s) + 1);
 	if (!str)
 		return (NULL);
