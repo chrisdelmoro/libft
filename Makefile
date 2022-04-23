@@ -57,22 +57,24 @@ BOBJ	= $(BONUS:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(SRC) $(BONUS) $(LIB)
-	$(CC) $(CFLAGS) -c $(SRC) $(BONUS) -I .
-	ar -rc $(NAME) $(OBJ) $(BOBJ)
+$(NAME): $(SRC)
+	$(CC) $(CFLAGS) -c $(SRC) -I .
+	ar -rc $(NAME) $(OBJ)
 
 so:
 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC) $(BONUS)
 	gcc -nostartfiles -shared -o libft.so $(OBJ) $(BOBJ)
 
-bonus: all
+bonus: $(BONUS) $(LIB)
+	$(CC) $(CFLAGS) -c $(BONUS) -I .
+	ar -rc $(NAME) $(BOBJ)
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(BOBJ)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re bonus so

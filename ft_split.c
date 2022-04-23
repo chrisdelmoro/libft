@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 18:58:29 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/04/21 00:32:02 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/04/21 22:11:00 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static size_t	ft_strcnt(const char *s, char c)
 	flag: flag used to identify quando a word is found
 */
 
-char	**feedstrs(char const *s, char c, size_t strcnt, char **strs)
+static char	**feedstrs(char const *s, char c, size_t strcnt, char **strs)
 {
 	size_t			i;
 	size_t			j;
