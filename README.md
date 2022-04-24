@@ -1,19 +1,18 @@
-- VERIFIQUE NOMES DE ARQUIVOS E PASTAS!!!!!
+# Libft
 
-- If the subject requires it, you must submit a Makefile which will compile your
-source files to the required output with the flags -Wall, -Wextra and -Werror, use
-cc, and your Makefile must not relink.
+## Introduction
+Libft is the very first project of the 42 cursus. In it, we are expected to write several functions that will help us throughout the majority of the fundamentals track. In it we will find functions to deal with characters, strings, numbers, memory allocation and treatment, as well as functions to deal with linked lists.
 
-- Your Makefile must at least contain the rules $(NAME), all, clean, fclean and
-re.
+## Division of the project
+* **First Part:** A set of functions from the  libc. Your functions will have the same prototypes and implement the same behaviors as the originals. They must comply with the way they are defined in their  man. The only difference will be their names.
+* **Second Part:** A set of functions that are either not in the  libc, or that are part of it but in a different form.
+* **Bonus Part:** A set of functions that are used to manipulate linked lists.
 
-- We encourage you to create test programs for your project even though this work
-won’t have to be submitted and won’t be graded. It will give you a chance
-to easily test your work and your peers’ work. You will find those tests especially
-useful during your defence. Indeed, during defence, you are free to use your tests
-and/or the tests of the peer you are evaluating.
-
-- If you need helper functions to split a more complex function, define them as static
-functions. This way, their scope will be limited to the appropriate file.
-
-- Place all your files at the root of your repository.
+## Makefile
+| Command | Usage |
+| --- | --- |
+| `make` | creates .o files for each function of the mandatory part as well as the main library file, libft.a |
+| `make bonus` | creates .o files for each function of the bonus part and adds them to the library file
+| `make clean` | removes the .o files used to create the library |
+| `make fclean` | removes the .o & .a files used to create the library |
+| `make re` | removes all .o & .a files then remakes them |
