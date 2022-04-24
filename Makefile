@@ -57,7 +57,7 @@ BOBJ	= $(BONUS:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(SRC)
+$(NAME): $(SRC) $(LIB)
 	$(CC) $(CFLAGS) -c $(SRC) -I .
 	ar -rc $(NAME) $(OBJ)
 
