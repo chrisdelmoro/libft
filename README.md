@@ -4,7 +4,7 @@
 Libft is the very first project of the 42 cursus. In it, we are expected to write several functions that will help us throughout the majority of the fundamentals track. In it we will find functions to deal with characters, strings, numbers, memory allocation and treatment, as well as functions to deal with linked lists.
 
 ## Division of the project
-* **First Part:** A set of functions from the  libc. Your functions will have the same prototypes and implement the same behaviors as the originals. They must comply with the way they are defined in their  man. The only difference will be their names.
+* **First Part:** A set of functions from the  libc. The functions are expected to have the same prototypes and implement the same behaviors as the originals. They must comply with the way they are defined in their  man. The only difference is their names.
 * **Second Part:** A set of functions that are either not in the  libc, or that are part of it but in a different form.
 * **Bonus Part:** A set of functions that are used to manipulate linked lists.
 
