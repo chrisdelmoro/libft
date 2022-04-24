@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 13:19:18 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/04/21 00:13:48 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/04/23 19:05:41 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	const unsigned char	*psrc;
 	size_t				i;
 
-	if (!dest || !src)
+	if (!dest && !src)
 		return (NULL);
 	pdest = dest;
 	psrc = src;
