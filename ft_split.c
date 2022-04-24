@@ -6,85 +6,85 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 18:58:29 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/04/21 22:11:00 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/04/23 22:29:51 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_strcnt(const char *s, char c)
+static size_t	ft_word_count(const char *s, char c)
 {
-	size_t			strcnt;
+	size_t			word_count;
 	size_t			i;
 	unsigned int	flag;
 
-	strcnt = 0;
+	word_count = 0;
 	i = 0;
 	flag = 0;
 	while (s[i])
 	{
 		if (s[i] != c && flag == 0)
 		{
-			strcnt++;
+			word_count++;
 			flag = 1;
 		}
 		if (s[i] == c && flag == 1)
 			flag = 0;
 		i++;
 	}
-	return (strcnt);
+	return (word_count);
 }
 
 /*
-	i: index of the words in the array
-	j: index que travels through the characters of the string
-	laststr: index of the beginnig character of each word
-	flag: flag used to identify quando a word is found
+** 	word_index: index of the words in the array
+** 	s_index: index que travels through the characters of the string
+** 	word_start: index of the beginnig character of each word
+** 	flag: flag used to identify quando a word is found
 */
 
-static char	**feedstrs(char const *s, char c, size_t strcnt, char **strs)
+static char	**feedstrs(char const *s, char c, size_t word_count, char **strs)
 {
-	size_t			i;
-	size_t			j;
-	size_t			laststr;
+	size_t			word_index;
+	size_t			s_index;
+	size_t			word_start;
 	unsigned int	flag;
 
-	i = 0;
-	j = 0;
+	word_index = 0;
+	s_index = 0;
 	flag = 0;
-	while (i < strcnt)
+	while (word_index < word_count)
 	{
-		if (s[j] != c && flag == 0)
+		if (s[s_index] != c && flag == 0)
 		{
-			laststr = j;
+			word_start = s_index;
 			flag = 1;
 		}
-		if (s[j] == '\0' || (s[j] == c && flag == 1))
+		if (s[s_index] == '\0' || (s[s_index] == c && flag == 1))
 		{
-			strs[i] = ft_substr(s, laststr, j - laststr);
+			strs[word_index] = ft_substr(s, word_start, s_index - word_start);
 			flag = 0;
-			i++;
+			word_index++;
 		}
-		j++;
+		s_index++;
 	}
 	return (strs);
 }
 
 /*
-	strncnt: counter of how many words were found in the string s
+** 	word_count: counter of how many words were found in the string s
 */
 
 char	**ft_split(char const *s, char c)
 {
 	char			**strs;
-	size_t			strcnt;
+	size_t			word_count;
 
 	if (!s)
 		return (NULL);
-	strcnt = ft_strcnt(s, c);
-	strs = (char **) ft_calloc(strcnt + 1, sizeof(char *));
+	word_count = ft_word_count(s, c);
+	strs = (char **) ft_calloc(word_count + 1, sizeof(char *));
 	if (!strs)
 		return (NULL);
-	feedstrs(s, c, strcnt, strs);
+	feedstrs(s, c, word_count, strs);
 	return (strs);
 }
