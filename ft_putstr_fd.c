@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 23:41:12 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/04/21 00:28:44 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/04/25 19:03:27 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (!s || !fd)
+	if (!s)
 		return ;
 	write(fd, s, ft_strlen(s));
 }
