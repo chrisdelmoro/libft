@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 22:17:23 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/04/25 18:08:27 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/04/26 19:31:34 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,11 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
+	size_t	max_test;
 
+	max_test = nmemb * size;
+	if (nmemb != 0 && (max_test / nmemb != size))
+		return (NULL);
 	ptr = malloc(nmemb * size);
 	if (!ptr)
 		return (NULL);
