@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 18:58:29 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/04/23 22:29:51 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/04/26 21:19:02 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static size_t	ft_word_count(const char *s, char c)
 ** 	word_index: index of the words in the array
 ** 	s_index: index que travels through the characters of the string
 ** 	word_start: index of the beginnig character of each word
-** 	flag: flag used to identify quando a word is found
+** 	flag: flag used to identify when a word is found
 */
 
 static char	**feedstrs(char const *s, char c, size_t word_count, char **strs)
