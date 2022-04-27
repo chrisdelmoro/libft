@@ -6,7 +6,7 @@
 /*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 17:43:58 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/04/23 22:10:04 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/04/26 22:09:11 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,6 @@ int		ft_toupper(int c);
  * original form case c is not a uppercase letter.
  */
 int		ft_tolower(int c);
-
 
 /* <string.h> functions: */
 /* Memory: */
@@ -244,7 +243,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size);
  * @param src Pointer to the source area of memory.
  * @param size Buffer size in bytes.
  * 
- * @return size_t Return the total length of the string, that is the initial
+ * @return (size_t) Return the total length of the string, that is the initial
  * length of dst plus the length of src.
  */
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
@@ -265,11 +264,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
  */
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 
-
 /* <stdlib.h> functions: */
 /**
- * @brief The ft_atoi() function converts the initial portion of the string pointed
- * to by nptr to int.
+ * @brief The ft_atoi() function converts the initial portion of the string
+ * pointed to by nptr to int.
  *
  * @param nptr Points to the area of memory of the beginning of string to be
  * converted.
@@ -279,24 +277,24 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(const char *nptr);
 
 /**
- * @brief The calloc() function allocates memory for an array of nmemb elements of
- * size bytes each and returns a pointer to the allocated memory. The memory is set
- * to zero. If nmemb or size is 0, then calloc() returns either NULL, or a unique
- * pointer value that can later be successfully passed to free().
+ * @brief The calloc() function allocates memory for an array of nmemb
+ * elements of size bytes each and returns a pointer to the allocated memory.
+ * The memory is set to zero. If nmemb or size is 0, then calloc() returns
+ * either NULL, or a unique pointer value that can later be successfully
+ * passed to free().
  *
  * @param nmemb Number of elements to be allocated.
  * @param size Size of bytes for each element.
  *
- * @return (void *) Returns a pointer to the allocated memory that is suitably aligned for
- * any kind of variable. On error, these functions return NULL. NULL may also be
- * returned by a successful call to calloc() with nmemb or size equal to zero.
+ * @return (void *) Returns a pointer to the allocated memory that is suitably
+ * aligned for any kind of variable. On error, these functions return NULL.
+ * NULL may also be returned by a successful call to calloc() with nmemb or
+ * size equal to zero.
  */
 void	*ft_calloc(size_t nmemb, size_t size);
 
-
 /* <strings.h> functions: */
 void	ft_bzero(void *s, size_t n);	// Deprecated; use memset instead
-
 
 /* New functions: */
 /**
@@ -314,7 +312,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 /**
  * @brief The ft_strjoin() function allocates (with malloc(3)) and returns a
- * newstring, which is the result of the concatenationof ’s1’ and ’s2’.
+ * newstring, which is the result of the concatenation of ’s1’ and ’s2’.
  *
  * @param s1 The prefix string.
  * @param s2 The suffix string.
@@ -417,7 +415,6 @@ void	ft_putendl_fd(char *s, int fd);
  * @param fd The file descriptor on which to write.
  */
 void	ft_putnbr_fd(int n, int fd);
-
 
 /* Bonus functions: */
 /**
