@@ -312,7 +312,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 /**
  * @brief The ft_strjoin() function allocates (with malloc(3)) and returns a
- * newstring, which is the result of the concatenation of ’s1’ and ’s2’.
+ * new string, which is the result of the concatenation of ’s1’ and ’s2’.
  *
  * @param s1 The prefix string.
  * @param s2 The suffix string.
