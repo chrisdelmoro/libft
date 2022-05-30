@@ -50,10 +50,15 @@ BONUS =	ft_lstnew.c \
 		ft_lstiter.c \
 		ft_lstmap.c
 
+ADD =	ft_freethis.c
+
 OBJ		= $(SRC:.c=.o)
 
 BOBJ	= $(BONUS:.c=.o)
 
+ADDOBJ	= $(ADD:.c=.o)
+
+full: $(NAME) bonus add
 
 all: $(NAME)
 
@@ -65,12 +70,16 @@ bonus: $(BONUS) $(LIB)
 	$(CC) $(CFLAGS) -c $(BONUS) -I .
 	ar -rc $(NAME) $(BOBJ)
 
+add: $(ADD) $(LIB)
+	$(CC) $(CFLAGS) -c $(ADD) -I .
+	ar -rc $(NAME) $(ADDOBJ)
+
 clean:
-	rm -f $(OBJ) $(BOBJ)
+	rm -f $(OBJ) $(BOBJ) $(ADDOBJ)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re bonus
+.PHONY: full all bonus add clean fclean re bonus

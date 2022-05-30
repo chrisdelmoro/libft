@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccamargo <ccamargo@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: ccamargo <ccamargo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 17:43:58 by ccamargo          #+#    #+#             */
-/*   Updated: 2022/04/26 22:09:11 by ccamargo         ###   ########.fr       */
+/*   Updated: 2022/05/30 16:38:34 by ccamargo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -416,7 +416,9 @@ void	ft_putendl_fd(char *s, int fd);
  */
 void	ft_putnbr_fd(int n, int fd);
 
-/* Bonus functions: */
+/*
+* Bonus functions:
+ */
 /**
  * @brief The ft_lstnew() function allocates (with malloc(3)) and returns a
  * new element. The variable ’content’ is initialized with the value of the
@@ -509,5 +511,17 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
  * @return (t_list *) Returns the new list or NULL if the allocation fails.
  */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+/* 
+* Adcional functions:
+ */
+/**
+ * @brief The ft_freethis() function simply free a malloc'd pointer and points
+ * it to whatever the user wants. i.e. NULL.
+ * 
+ * @param str The address of the pointer to be free'd.
+ * @param content The target to point str to.
+ */ 
+void	ft_freethis(char **str, void *content);
 
 #endif
