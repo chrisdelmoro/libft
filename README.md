@@ -1,3 +1,16 @@
+<br/>
+<p align="center">
+    <img src="https://github.com/chrisdelmoro/42cursus/blob/main/badges/libftm.png" alt="Logo" width="150" height="150">
+
+  <p align="center">
+    A C library, the first assignment from 42's cursus.
+    <br/>
+    <img src="https://img.shields.io/badge/Mandatory-OK-brightgreen"/>
+    <img src="https://img.shields.io/badge/Bonus-OK-brightgreen"/>
+    <img src="https://img.shields.io/badge/Final%20Score-125-blue"/>
+  </p>
+</p>
+
 # Libft
 
 ## Introduction
