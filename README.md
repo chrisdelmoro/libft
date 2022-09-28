@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-    <img src="https://github.com/chrisdelmoro/42cursus/blob/main/badges/libftm.png" alt="Logo" width="150" height="150">
+    <img src="https://github.com/chrisdelmoro/libft/blob/main/resources/repo/libftm.png" alt="Logo" width="150" height="150">
 
   <p align="center">
     A C library, the first assignment from 42's cursus.
